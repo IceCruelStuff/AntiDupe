@@ -1,6 +1,7 @@
 <?php
    
 namespace AntiDupe;
+
 use pocketmine\tile\Tile;
 use pocketmine\tile\Hopper;
 use pocketmine\event\Listener;
@@ -10,17 +11,18 @@ use pocketmine\level\sound\AnvilUseSound;
 use pocketmine\level\Level;
 use pocketmine\Player;
 use pocketmine\Server;
-class AntiDupe extends PluginBase implements Listener{
+
+class AntiDupe extends PluginBase implements Listener {
 	
 	public $prefix = "§8[§5AntiDupe§8] ";
 	
 	
-	public function onEnable(){
+	public function onEnable() {
 		
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 	}
 	
-	public function onTap(PlayerInteractEvent $e){
+	public function onTap(PlayerInteractEvent $e) {
 		
 		$p = $e->getPlayer();
 		$b = $e->getBlock();
